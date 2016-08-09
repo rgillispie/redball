@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        
+        <title>Hello World</title>
+        
+        <script type="text/javascript">
+        
+        function sayhello() {
+            alert('get yo goooof aaaaaasss off my mac')
+        }
+        
+        function moveright() {
+            redball.left = redball.left+1;   
+        }
+        
+        function moveleft() {
+            redball.left = redball.left-1;  
+        }
+        
+        function moveup() {
+            redball.top = redball.top-1;
+        }
+        
+        function movedown() {
+            redball.top = redball.top+1;
+        }
+        
+        function moveupoverright() {
+            redball.left = redball.left+1;
+            redball.top = redball.top-1;
+        }
+        
+        function movedownoverright() {
+            redball.top = redball.top+1;
+            redball.left = redball.left+1;
+        }
+        
+        function moveupoverleft() {
+            redball.left = redball.left-1;
+            redball.top = redball.top-1;
+        }
+        
+        function movedownoverleft() {
+           redball.top = redball.top+1;
+           redball.left = redball.left-1;
+        }
+        
+        function movetriangle() {
+            var i;
+            for(i=0; i<60; i++){
+                moveupoverright()
+            }
+            for(i=0; i<60; i++){
+                movedownoverright()
+            }
+            for(i=0; i<60; i++){
+                moveleft()
+            }
+        }
+        
+        function movesquare() {
+            var i;
+            for(i=0; i<60; i++){
+                moveright();
+            }
+            for(i=0; i<60; i++){
+                movedown()
+            }
+            for(i=0; i<60; i++){
+                moveleft()
+            }
+            for(i=0; i<60; i++){
+                moveup()
+            }
+        }
+        function moveoctagon() {
+            var i;
+            for(i=0; i<60; i++){
+                moveup()
+            }
+            for(i=0; i<60; i++){
+                moveupoverright()
+            }
+            for(i=0; i<60; i++){
+                moveright()
+            }
+            for(i=0; i<60; i++){
+                movedownoverright()
+            }
+            for(i=0; i<60; i++){
+                movedown()
+            }
+            for(i=0; i<60; i++){
+                movedownoverleft()
+            }
+            for(i=0; i<60; i++){
+                moveleft()
+            }
+            for(i=0; i<60; i++){
+                moveupoverleft()
+            }
+        }
+        
+        </script>
+        
+        <script type="text/javascript" src="https://storage.googleapis.com/ics-redball/redball.js"></script>
+        
+    </head>
+    
+    <body>
+        
+        <button onclick="sayhello()">seriously</button>
+        
+        <img id="redball" src="http://storage.googleapis.com/ics-redball/redball.jpg"/>
+        
+        <button onclick="moveleft()">left center</button>
+        
+        <button onclick="moveright()">right center</button>
+        
+        <button onclick="moveup()">top center</button>
+        
+        <button onclick="movedown()">down center</button>
+        
+        <button onclick="moveupoverright()">right upper corner</button>
+        
+        <button onclick="movedownoverright()">right lower corner</button>
+        
+        <button onclick="moveupoverleft()">left upper corner</button>
+        
+        <button onclick="movedownoverleft()">left lower corner</button>
+        
+        <button onclick="movetriangle()">triangle</button>
+        
+        <button onclick="movesquare()">square</button>
+        
+        <button onclick="moveoctagon()">octagon</button>
+        
+    </body>
+    
+</html>
