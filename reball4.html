@@ -73,11 +73,22 @@
                 ball.animate({"left":"+=50","top":"-=50"},500,"linear");
             }
             
-             
-                 
-                 
-                 
-                 
+             $(document).keydown(function(key) {
+  switch(parseInt(key.which,10)) {
+  case 37:
+  $('.pic').animate({left: "-=10px"}, 'fast');
+  break;
+  case 38:
+  $('.pic').animate({top: "-=10px"}, 'fast');
+  break;
+  case 39:
+  $('.pic').animate({left: "+=10px"}, 'fast');
+  break;
+  case 40:
+  $('.pic').animate({top: "+=10px"}, 'fast');
+  break;
+    }
+ });    
                  
                  
                  

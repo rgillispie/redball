@@ -25,7 +25,15 @@
         </script>
         
                
-        <script> 
+        <script>
+        
+            
+            function right() {
+                if(redball.left <= window.innerWidth - 20) {
+                    redball.left = redball.left 20;
+                }
+            }
+            
             function left() {
                 var ball = $("#redball");
                 ball.animate({"left":"-=100"}, 500, "linear");
